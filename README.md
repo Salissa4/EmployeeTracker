@@ -1,2 +1,2 @@
 # EmployeeTracker
-mysqle
+mysql
