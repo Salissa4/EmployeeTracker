@@ -16,13 +16,32 @@ Write description
 ## Installation
 
 To run via local environment: 
-1. Clone the repository
+1.  Clone the repository
 
-2. Open terminal, and navigate to the appropriate directory
+2.  Open terminal, and navigate to the appropriate directory
 
-3. Run `npm install` from command line then run `npm run start`
+3.  From command line: 
+    - `npm init` 
+    - `npm install` 
 
-4. Open `http://localhost:3001`
+    Install the following dependencies: 
+    - mysql2 `npm install --save mysql2` 
+    - inquirer `npm install inquirer@8.2.4` 
+    - asciiart-logo `npm i asciiart-logo` 
+    - console.table `npm i console.table`
+    
+    Continue in command line:
+    - `mysql -u root -p` 
+    - User will be prompted for password: a 
+
+    Once mysql is running 
+    - `source db/schema.sql;` 
+    - `source db/seeds.sql;` 
+    
+    proceed to quit 
+    - `quit;`
+
+5.  Finally type `node server.js`
 
 ## Usage
 
