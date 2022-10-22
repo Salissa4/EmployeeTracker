@@ -1,4 +1,23 @@
 {
+  "name": "employeetracker",
+  "version": "1.0.0",
+  "description": "## Description",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Salissa4/EmployeeTracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Salissa4/EmployeeTracker/issues"
+  },
+  "homepage": "https://github.com/Salissa4/EmployeeTracker#readme",
   "dependencies": {
     "asciiart-logo": "^0.2.7",
     "console.table": "^0.10.0",
