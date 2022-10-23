@@ -2,7 +2,7 @@
 
 ## Description
 
-Write description
+Build a command line application to manage a company's employee database utilizing Node.js, Inquirer and MySQL. Ensure user is able to view all: employees, roles, departments, employee's by department and manager, department budget; be able to add/delete employee, role and department; update employee, employee role, and employee department.
 
 ## Table of Contents
 
