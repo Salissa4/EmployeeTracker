@@ -147,7 +147,7 @@ function viewEmployeesByDepartment() {
         value: id
       }));
 
-      prompt([
+      inquirer.prompt([
         {
           type: 'list',
           name: 'departmentId',
@@ -174,7 +174,7 @@ function viewEmployeesByManager() {
         value: id
       }));
 
-      prompt([
+      inquirer.prompt([
         {
           type: 'list',
           name: 'managerId',
@@ -209,7 +209,7 @@ function viewDepartmentBudget() {
 
 //add employee
 function addEmployee() {
-  prompt([
+  inquirer.prompt([
     {
       name: 'first_name',
       message: "Enter employee's first name:"
@@ -222,7 +222,7 @@ function addEmployee() {
     .then(res => {
       let firstName = res.first_name;
       let lastName = res.last_name;
-      db.findAllRoles()
+      db.findAllRole()
         .then(([rows]) => {
           let roles = rows;
           const roleChoices = roles.map(({ id, title }) => ({
@@ -230,7 +230,7 @@ function addEmployee() {
             value: id
           }));
 
-          prompt({
+          inquirer.prompt({
             type: 'list',
             name: 'roleId',
             message: "Select employee's role",
@@ -247,7 +247,7 @@ function addEmployee() {
                 }));
                 managerChoices.unshift({ name: "None", value: null });
 
-          prompt({
+          inquirer.prompt({
             type: 'list',
             name: 'managerId',
             message: "Select employee's manager:",
@@ -260,7 +260,7 @@ function addEmployee() {
                 first_name: firstName,
                 last_name: lastName
               }
-            db.createEmployee(employee);
+            db.addEmployee(employee);
             })
             .then(() => console.log(`Employee ${firstName} ${lastName} has been added!`))
             .then(() => promptUser())
@@ -280,7 +280,7 @@ function addRole() {
         value: id
       }));
 
-      prompt([
+      inquirer.prompt([
         {
           name: 'title',
           message: 'Enter name of new role'
@@ -306,7 +306,7 @@ function addRole() {
 
 //add department
 function addDepartment() {
-  prompt([
+  inquirer.prompt([
     {
       name: 'name',
       message: 'Enter new department name:'
@@ -330,7 +330,7 @@ function updateEmployeeRole() {
         value: id
       }));
 
-      prompt([
+      inquirer.prompt([
         {
           type: 'list',
           name: 'employeeId',
@@ -340,7 +340,7 @@ function updateEmployeeRole() {
       ])
         .then(res => {
           let employeeId = res.employeeId;
-          db.findAllRoles()
+          db.findAllRole()
             .then(([rows]) => {
               let roles = rows;
               const roleChoices = roles.map(({ id, title }) => ({
@@ -348,7 +348,7 @@ function updateEmployeeRole() {
                 value: id
               }));
 
-              prompt([
+              inquirer.prompt([
                 {
                   type: 'list',
                   name: 'roleId',
@@ -374,7 +374,7 @@ function updateEmployeeManager() {
         value: id
       }));
 
-      prompt([
+      inquirer.prompt([
         {
           type: 'list',
           name: 'employeeId',
@@ -392,7 +392,7 @@ function updateEmployeeManager() {
                 value: id
               }));
 
-              prompt([
+              inquirer.prompt([
                 {
                   type: 'list',
                   name: 'managerId',
@@ -419,7 +419,7 @@ function removeEmployee() {
         value: id
       }));
 
-      prompt([
+      inquirer.prompt([
         {
           type: 'list',
           name: 'employeeId',
@@ -434,7 +434,7 @@ function removeEmployee() {
 }
 
 function removeRole() {
-  db.findAllRoles()
+  db.findAllRole()
     .then(([rows]) => {
       let roles = rows;
       const roleChoices = roles.map(({ id, title }) => ({
@@ -442,7 +442,7 @@ function removeRole() {
         value: id
       }));
 
-      prompt([
+      inquirer.prompt([
         {
           type: 'list',
           name: 'roleId',
@@ -467,7 +467,7 @@ function removeDepartment() {
         value: id
       }));
 
-      prompt({
+      inquirer.prompt({
         type: 'list',
         name: 'departmentId',
         message:
