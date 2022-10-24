@@ -32,7 +32,7 @@ To run via local environment:
     
     Continue in command line:
     - `mysql -u root -p` 
-    - User will be prompted for password: a 
+    - User will be prompted for password
 
     Once mysql is running 
     - `source db/schema.sql;` 
