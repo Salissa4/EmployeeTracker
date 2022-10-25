@@ -52,6 +52,7 @@ To run via local environment:
 ## Credits
 
 Collab/debug: Shawn Tschoepe Github: https://github.com/shawn220a
+Collab: Jeffery Littleton Github: Github: https://github.com/littletonjeffrey
 
 ## License
 
