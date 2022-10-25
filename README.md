@@ -1,4 +1,4 @@
-# EmployeeTracker
+# Employee Tracker
 
 ## Description
 
@@ -6,12 +6,18 @@ Build a command line application to manage a company's employee database utilizi
 
 ## Table of Contents
 
-- [Installation](#installation)
 - [Usage](#usage)
+- [Installation](#installation)
 - [Credits](#credits)
 - [License](#license)
 - [Badges](#badges)
 - [Contribute](#how-to-contribute)
+
+## Usage
+
+Live on [Screencastify](https://drive.google.com/file/d/1LyORF54EYTgzpnxrA-ur7g_Ue8BVJCm0/view) 
+
+![EmployeeTracker](/assets/demo.png)
 
 ## Installation
 
@@ -43,15 +49,9 @@ To run via local environment:
 
 5.  Finally type `node server.js`
 
-## Usage
-
-Live on [Screencastify]() 
-
-![EmployeeTracker](/assets/.png)
-
 ## Credits
 
-Debugger:  Github: 
+Collab/debug: Shawn Tschoepe Github: https://github.com/shawn220a
 
 ## License
 

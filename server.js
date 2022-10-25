@@ -68,8 +68,7 @@ function promptUser() {
         ]
       }
     ]).then(res => {
-            let choice =res.choice;
-            //switch 
+            let choice =res.choice; 
             switch (choice) {
               case 'VIEW_EMPLOYEES': viewEmployees();
                 break;
@@ -113,7 +112,6 @@ function viewEmployees() {
     }).then(() => promptUser());
     }
 
-//cant get working
 function viewRoles() {
   db.allRoles()
     .then(([rows]) => {
@@ -123,7 +121,6 @@ function viewRoles() {
     }).then(() => promptUser());
 }
 
-//cant get working
 function viewDepartments() {
   db.allDepartments()
     .then(([rows]) => {
@@ -305,7 +302,7 @@ function updateEmployeeRole() {
       ])
         .then(res => {
           let employeeId = res.employeeId;
-          db.allRole()
+          db.allRoles()
             .then(([rows]) => {
               let roles = rows;
               const roleChoices = roles.map(({ id, title }) => ({
