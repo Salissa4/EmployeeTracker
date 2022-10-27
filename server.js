@@ -6,7 +6,7 @@ require('console.table');
 
 init();
 function init() {
-  const mainText = main({ name: "Employee Manager"}).render();
+  const mainText = main({ name: "Employee Manager", logoColor: "bold-cyan", borderColor: "bold-yellow"}).render();
 
   console.log(mainText);
 
